@@ -1,7 +1,7 @@
 ---
 title: "Unit 4 - 6 Review Starter"
-author: "Insert your group number and name here"
-date: "Insert date here"
+author: "Group 1, Judy Malas"
+date: "November 1, 2021"
 output: html_document
 ---
 
@@ -36,7 +36,11 @@ month_name <- c("January",
 
 #### Member 1
 
-Add your code here.
+```{r}
+season = c("winter", "winter", "winter", "spring", "spring", "spring", "summer",
+          "summer", "summer", "fall", "fall", "winter")
+```
+
 
 #### Member 2
 
