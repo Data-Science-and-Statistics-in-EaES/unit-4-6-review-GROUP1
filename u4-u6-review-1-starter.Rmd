@@ -1,7 +1,7 @@
 ---
 title: "Unit 4 - 6 Review Starter"
-author: "Insert your group number and name here"
-date: "Insert date here"
+author: "Group 1, Gabriel Gomez"
+date: "11,1,2021"
 output: html_document
 ---
 
@@ -40,7 +40,10 @@ Add your code here.
 
 #### Member 2
 
-Add your code here.
+```{r order-month-vector}
+order <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+```
+
 
 #### Member 3
 
