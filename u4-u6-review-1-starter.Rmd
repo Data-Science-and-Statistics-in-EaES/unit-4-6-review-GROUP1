@@ -36,7 +36,11 @@ month_name <- c("January",
 
 #### Member 1
 
-Add your code here.
+```{r}
+season = c("winter", "winter", "winter", "spring", "spring", "spring", "summer",
+          "summer", "summer", "fall", "fall", "winter")
+```
+
 
 #### Member 2
 
