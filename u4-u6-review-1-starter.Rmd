@@ -158,7 +158,31 @@ Add your code here.
 
 #### Member 1
 
-Add your code here.
+```{r sample}
+sample(1:11, 1)
+
+```
+```{r}
+df_judy = month_season
+
+month_name = df_judy %>% 
+  filter(month_name == c("January", 
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October")) %>% 
+  pull(month_name)
+
+
+
+```
+
+
 
 #### Member 2
 
@@ -187,7 +211,37 @@ ___ <- tibble::tibble(
 
 #### Member 1
 
-Add your code here.
+
+```{r try-merge-vectors_1, eval = F}
+df_judy_2 <- tibble::tibble(
+  "month_name" = month_name,
+  "season" = season
+)
+```
+
+
+```{r try-merge-vectors_2, eval = T}
+
+month_name <- c("January", 
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December")
+
+df_judy_3 <- tibble::tibble(
+  "month_name" = month_name,
+  "season" = season
+)
+```
+
+The try-merge-vectors_1 chunk didn't work because the vectors we were trying to add were different lengths
 
 #### Member 2
 
