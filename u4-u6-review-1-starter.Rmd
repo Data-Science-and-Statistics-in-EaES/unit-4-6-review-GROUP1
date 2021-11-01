@@ -1,6 +1,6 @@
 ---
 title: "Unit 4 - 6 Review Starter"
-author: "Group 1, Gabriel Gomez"
+author: "Group 1, Gabriel Gomez, Judy Malas, Sarah Khoury"
 date: "11,1,2021"
 output: html_document
 ---
@@ -64,15 +64,21 @@ Add your code here.
 ## Exercise 2 - Combine into a data frame
 
 ```{r merge-two-vectors, eval = F}
-___ <- tibble::tibble(
+____ <- tibble::tibble(
   "month_name" = month_name,
-  "___" = ___
+  "mean_season" = season
 )
 ```
 
 #### Member 1
 
-Add your code here.
+```{r merge-two-vectors-group, eval = T}
+month_season <- tibble::tibble(
+  "month_name" = month_name,
+  "month_season" = season, 
+  "month_order" = order
+)
+```
 
 #### Member 2
 
@@ -94,7 +100,43 @@ Add your code here.
 
 #### Member 1
 
-Add your code here.
+```{r plot}
+library(ggplot2)
+
+ggplot(month_season, aes(month_name, order)) +
+  geom_point()
+
+
+```
+
+```{r relevel}
+library(forcats) 
+library(tidyverse)
+
+
+month_season = month_season %>% 
+  mutate(month_name = fct_relevel(month_name, "January", 
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December"))
+
+```
+
+
+```{r replot}
+
+ggplot(month_season, aes(month_name, order)) +
+  geom_point()
+```
+
 
 #### Member 2
 
